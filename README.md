@@ -14,4 +14,4 @@ The Jasco switches that support the use of double tap are currently not triggeri
   - "Group 3" of the switch must be set to include your controller device. You will probably need to use the community version of ZWave-JS in order to set group members.
 
 **Thanks:**  
-  This blueprint is a reworking of the excellent blueprint by [kpine] (https://gist.github.com/kpine)
+  This blueprint is a reworking of the excellent GE Switch Double Taps blueprint by [kpine] (https://gist.github.com/kpine)
