@@ -13,5 +13,5 @@ The Jasco switches that support the use of double tap are currently not triggeri
   - Jasco Z-Wave switches that support "Double Tap" functionality.  I personally have had luck using 14321 / ZW3005  with firmware 5.29.
   - "Group 3" of the switch must be set to include your controller device. You will probably need to use the community version of ZWave-JS in order to set group members.
 
-**Thanks:***  
+**Thanks:**  
   This blueprint is a reworking of the excellent blueprint by [kpine] (https://gist.github.com/kpine)
