@@ -1,0 +1,40 @@
+blueprint:
+  name: Jasco Switch Double Taps
+  description: Create automations to react to double taps from supporting Jasco switches.
+  domain: automation
+  input:
+    device:
+      name: Switch Device
+      description: A Jasco switch that supports double taps.
+      selector:
+        device:
+          integration: zwave_js
+          multiple: false
+    double_tap_on:
+      name: Double Tap On
+      description: Actions to run for a double tap on.
+      default: []
+      selector:
+        action: {}
+    double_tap_off:
+      name: Double Tap Off
+      description: Actions to run for a double tap off.
+      default: []
+      selector:
+        action: {}
+  source_url: https://github.com/cap60552/HA-Jasco-DoubleTap.git
+mode: single
+max_exceeded: silent
+trigger:
+  platform: zwave_js.value_updated
+  device_id: !input device
+  command_class: 32
+  property: currentValue	
+action:
+- variables:
+    value: '{{ trigger.current_value }}'
+- choose:
+  - conditions: '{{ value == 0 }}'
+    sequence: !input double_tap_off
+  - conditions: '{{ value == 255 }}'
+    sequence: !input double_tap_on
