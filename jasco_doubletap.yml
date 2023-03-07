@@ -7,9 +7,7 @@ blueprint:
     
     Create automations to react to double taps from supporting Jasco switches.
 
-    The Jasco switches that support the use of double tap are currently not triggering events in ZWave-Js.  However using the "zwave_js.value_updated" trigger in home assistant it is still possible to offer double tap functionality on these switches.
-
-          
+    The Jasco switches that support the use of double tap are currently not triggering events in ZWave-Js.  However using the "zwave_js.value_updated" trigger in home assistant it is still possible to offer double tap functionality on these switches.         
     
     **Requirements:**
       - ZWave-JS
